@@ -1,0 +1,17 @@
+{
+    "name": "vendor1/first-package",
+    "description": "This is my first package",
+    "authors": [
+        {
+            "name": "David Gomà",
+            "email": "dgoma108@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Vendor1\\FirstPackage\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    }
+}
