@@ -24,6 +24,11 @@
         },
         "files": ["src/helpers.php"]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Vendor1\\FirstPackage\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
