@@ -1,17 +1,39 @@
 {
     "name": "vendor1/first-package",
     "description": "This is my first package",
+    "keywords": ["laravel", "learning", "packages"],
     "authors": [
         {
             "name": "David Gomà",
-            "email": "dgoma108@gmail.com"
+            "email": "dgoma108@gmail.com",
+            "homepage": "https://davidgoma.es",
+            "role": "Developer"
         }
     ],
-    "require": {},
+    "homepage": "https://github.com/dgoma108/packages.git",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.20"
+    },
     "autoload": {
         "psr-4": {
             "Vendor1\\FirstPackage\\": "src/"
         },
         "files": ["src/helpers.php"]
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vendor1\\FirstPackage\\FirstPackageServiceProvider"
+            ],
+            "aliases": {
+                "FirstPackage": "Vendor1\\FirstPackage\\Facades\\FirstPackage"
+            } 
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
