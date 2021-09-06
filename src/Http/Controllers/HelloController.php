@@ -8,6 +8,8 @@ class HelloController
 {
     public function index()
     {
-        return FirstPackage::hello();
+        return view('first-package::home', [
+            'message' => FirstPackage::hello(),
+        ]);
     }
 }

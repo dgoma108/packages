@@ -12,4 +12,11 @@ class CanGetTheMessageTest extends TestCase
         
         $this->get('hello-route')->assertSee('Hola Crack desde mi primer paquete');
     }
+
+    function test_can_get_the_message_through_a_view()
+    {
+        //$this->withoutExceptionHandling();
+        
+        $this->get('hello-route')->assertViewIs('first-package::home');
+    }
 }
