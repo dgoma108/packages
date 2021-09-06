@@ -8,6 +8,8 @@ class CanGetTheMessageTest extends TestCase
 {
     function test_can_get_the_message()
     {
+        $this->withoutExceptionHandling();
+        
         $this->get('hello-route')->assertSee('Hola Crack desde mi primer paquete');
     }
 }
