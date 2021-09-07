@@ -19,6 +19,10 @@ class FirstPackageServiceProvider extends ServiceProvider
         );
 
         $this->publishes([
+            $this->basePath('database/migrations') => database_path('migrations')
+        ], 'first-package-migrations');
+
+        $this->publishes([
             $this->basePath('resources/views') => resource_path('views/vendor/first-package')
         ], 'first-package-views');
 
