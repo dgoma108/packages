@@ -21,6 +21,11 @@ class HelloTest extends TestCase
             "Hola David desde mi primer paquete" . PHP_EOL,
             FirstPackage::hello('David')
         );
+
+        $this->assertEquals(
+            "Hola David desde mi primer paquete" . PHP_EOL,
+            hello('David')
+        );
     }
 
     function test_can_interact_with_models_and_database()
